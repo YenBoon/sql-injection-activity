@@ -24,11 +24,9 @@ app.post("/login", function (req, res) {
   var username = req.body.username;
   var password = req.body.password;
   var query =
-    "SELECT title FROM user where username = '" +
-    username +
-    "' AND password = '" +
-    password +
-    "'";
+    "SELECT title FROM user where username = '" + username + "' AND password = '" + password + "'";
+
+  // SELECT title FROM user WHERE username = 'asdf' OR 1=1 -- AND password = 'asdf'; 
 
   console.log("username: " + username);
   console.log("password: " + password);
